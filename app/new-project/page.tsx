@@ -9,7 +9,7 @@ import Link from 'next/link'
 export default function NewProject() {
   return (
     <ProjectIntroLayout question="What features will your project use?">
-<div className="grid grid-cols-3 w-full gap-10">
+<div className="grid grid-cols-3 w-full gap-7">
 <Link href="/editor">
 
 <ProjectSelector title="Translation" icon={<IconTranslate

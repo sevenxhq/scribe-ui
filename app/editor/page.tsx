@@ -12,7 +12,7 @@ import {
 import ChapterReading from "./ChapterReading"
 import QuestionCard from "./QuestionCard"
 import { Textarea } from "../components/ui/TextArea"
-import { ScrollArea } from "../components/ui/ScrollArea"
+import { ScrollArea, ScrollBar } from "../components/ui/ScrollArea"
 import { Badge } from "../components/ui/Badge"
   
   export default function Editor() {
@@ -70,27 +70,28 @@ confessed their sins, he baptized them in the Jordan River." />
         <div className="px-5 py-2.5 space-y-5">
           <div className="flex items-center gap-2">
           <Badge variant="destructive">Mark 1:9</Badge>
-<p className="tracking-wide text-xs font-semibold text-zinc-700">Alignment</p>
+<p className="tracking-wide text-xs font-semibold text-zinc-300 dark:text-zinc-700">Alignment</p>
           </div>
-          <p className="text-zinc-50 text-sm  font-medium tracking-wide leading-4">Cierto dia, Jesús llegó de Nazaret de Galilea, y Juan lo bautizó en el rio Jordán.</p>
+          <p className="dark:text-zinc-50 text-zinc-700 text-sm  font-medium tracking-wide leading-4">Cierto dia, Jesús llegó de Nazaret de Galilea, y Juan lo bautizó en el rio Jordán.</p>
         </div>
       </ResizablePanel>
       <ResizableHandle />
       <ResizablePanel className="p-5" defaultSize={50}>
-      <p className="text-zinc-50 selection:bg-emerald-500  text-sm tracking-wide font-medium leading-4"><span className="bg-emerald-500">One day Jesus</span> went from <span className="bg-emerald-500">Nazareth</span> in <span className="bg-emerald-500">Galilee, </span> and James I baptized him in the river.</p>
+      <p className="dark:text-zinc-50 text-zinc-700 dark:selection:bg-emerald-500 selection:bg-emerald-100  text-sm tracking-wide font-medium leading-4"><span className="dark:bg-emerald-500 bg-emerald-100">One day Jesus</span> went from <span className="dark:bg-emerald-500 bg-emerald-100">Nazareth</span> in <span className="dark:bg-emerald-500 bg-emerald-100">Galilee, </span> and James I baptized him in the river.</p>
       </ResizablePanel>
     </ResizablePanelGroup>
       </ResizablePanel>
       <ResizableHandle withHandle />
       <ResizablePanel className='p-2.5' defaultSize={32}>
-        <p className='font-semibold text-xs text-center tracking-wide leading-4 text-zinc-700'>Tsv translation notes english</p>
-        <div className='mt-2.5 rounded-lg flex items-center justify-between gap-[5px] bg-zinc-900 p-[5px]'>
-        <Button label='Book'  className="bg-zinc-800 text-zinc-500 w-1/3 uppercase font-semibold" />
-        <Button label='Chapter'  className="bg-zinc-800 text-zinc-500 w-1/3 uppercase font-semibold"  />
-        <Button label='Verse'  className="bg-zinc-800 text-zinc-500 w-1/3 uppercase font-semibold"  />
+        <p className='font-semibold text-xs text-center tracking-wide leading-4 dark:text-zinc-50 text-zinc-700'>Tsv translation notes english</p>
+        <div className='mt-2.5 rounded-lg flex items-center justify-between gap-[5px] dark:bg-zinc-900 bg-zinc-200  p-[5px]'>
+        <Button label='Book'  className="dark:bg-zinc-800 bg-zinc-50 hover:bg-zinc-100 dark:text-zinc-50 text-zinc-700 w-1/3 uppercase font-semibold" />
+        <Button label='Chapter'  className="dark:bg-zinc-800 bg-zinc-50 hover:bg-zinc-100 dark:text-zinc-50 text-zinc-700 w-1/3 uppercase font-semibold"  />
+        <Button label='Verse'  className="dark:bg-zinc-800 bg-zinc-50 hover:bg-zinc-100 dark:text-zinc-50 text-zinc-700 w-1/3 uppercase font-semibold"  />
 
         </div>
-        <article className='tracking-wide leading-[18px] mt-2.5 text-xs text-center font-semibold'>1:9b and was baptized by John in the Jordan.
+        <article className='dark:text-zinc-50 px-2 text-zinc-700 leading-[18px] mt-2.5   text-xs tracking-wide text-center whitespace-pre-line'>
+1:9b and was baptized by John in the Jordan.
 and [then] John baptized Jesus/him in the
 Jordan [River].
 -OR-
@@ -108,13 +109,15 @@ preaching,| John baptized him in the Jordan
       <ResizableHandle withHandle />
       <ResizablePanel defaultSize={25}>
       <ScrollArea className="w-full h-full overflow-y-auto pb-2  relative">
-        <div className='flex items-center sticky bg-zinc-950 top-0 z-20 gap-[5px] border-b py-2.5 px-2 border-zinc-900 justify-center'>
-      <Button label="Discuss" className="bg-cyan-950 text-cyan-700 border-cyan-900" />
+      <ScrollBar orientation="vertical" />
+
+        <div className='flex items-center sticky dark:bg-zinc-950 bg-white  top-0 z-20 gap-[5px] border-b py-2.5 px-2 dark:border-zinc-900 border-zinc-200 justify-center'>
+      <Button label="Discuss" className="dark:border-cyan-900 bg-cyan-100 hover:bg-cyan-200 dark:bg-cyan-950  border-cyan-300 text-cyan-700" />
   <Button label="Suggest" />
    <Button label="Checks" 
   />
     </div>
-    <div className="space-y-2.5  py-2.5 px-5">
+    <div className="space-y-2.5 px-5 py-2.5">
 <QuestionCard isAudio/>
 <QuestionCard isImage/>
 <QuestionCard/>
@@ -122,21 +125,21 @@ preaching,| John baptized him in the Jordan
 
 <QuestionCard/>
 
-<div className=" absolute bottom-0 pt-4 pb-[11px] bg-zinc-950 w-full left-0 px-5">
+<div className=" absolute bottom-0 pt-4 pb-[11px] bg-white dark:bg-zinc-950 w-full left-0 px-5">
     <div className="relative">
  <Textarea className="h-20" placeholder="Ask AI Bot some questions" /> 
  <div className="flex absolute bottom-2.5 right-2.5 items-center gap-2.5">
- <Button size="icon" className="bg-cyan-500 text-black  border-cyan-700" icon={<IconPhoto
+ <Button size="icon" className="dark:bg-cyan-500 bg-cyan-400 hover:bg-cyan-500 dark:hover:bg-cyan-400 text-zinc-800 dark:text-black  dark:border-cyan-700" icon={<IconPhoto
     size={12} 
     stroke={2}  
     strokeLinejoin="miter"
   />}/>
-   <Button size="icon" className="bg-cyan-500 text-black  border-cyan-700" icon={<IconMicrophone
+   <Button size="icon" className="dark:bg-cyan-500 bg-cyan-400 hover:bg-cyan-500 dark:hover:bg-cyan-400 text-zinc-800 dark:text-black  dark:border-cyan-700" icon={<IconMicrophone
     size={12} 
     stroke={2}  
     strokeLinejoin="miter"
   />}/>
-   <Button size="icon" className="bg-cyan-500 text-black  border-cyan-700" icon={<IconPhoto
+   <Button size="icon" className="dark:bg-cyan-500 bg-cyan-400 hover:bg-cyan-500 dark:hover:bg-cyan-400 text-zinc-800 dark:text-black  dark:border-cyan-700" icon={<IconPhoto
     size={12} 
     stroke={2}  
     strokeLinejoin="miter"
@@ -151,7 +154,7 @@ preaching,| John baptized him in the Jordan
       </ResizablePanel>
     </ResizablePanelGroup>
           
-<div className="p-3 flex items-center border-t border-zinc-900 justify-end">
+<div className="p-3 flex items-center border-t border-zinc-200 dark:border-zinc-900 justify-end">
 <Badge >saved 5 mins ago</Badge>
 </div>
         </div>

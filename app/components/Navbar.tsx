@@ -1,5 +1,7 @@
 import React from 'react'
-import Logo from "@public/icons/logo.svg"
+import WhiteLogo from "@public/icons/white-logo.svg"
+import BlackLogo from "@public/icons/black-logo.svg"
+
 import Button from './Button'
 import { IconUpload, IconArrowsDownUp,IconBell,IconLock, IconLetterCase, IconLayout, IconCloudUpload, IconExclamationCircle, IconSun, IconMoon } from '@tabler/icons-react';
 import { Badge } from './ui/Badge';
@@ -10,10 +12,15 @@ export default function Navbar({isCustom}:{isCustom:boolean}) {
 
   return (
     <nav  className=
-        "Nav fixed top-0 z-30  flex h-[3.75rem] border-zinc-900 px-5 border-b w-full items-center justify-between"
+        "Nav fixed top-0 z-30  flex h-[3.75rem] dark:border-zinc-900 border-zinc-200  px-5 border-b w-full items-center justify-between"
     >
-
-<Logo className=" dark:fill-black  fill-black" />
+{
+            colorMode == "dark" ? (
+<WhiteLogo  />
+            ) : (
+<BlackLogo  />
+            )
+          }
 <div className='flex items-center gap-x-2.5'>
 <Button label='Import' icon={<IconUpload
     size={14} 
@@ -36,7 +43,7 @@ export default function Navbar({isCustom}:{isCustom:boolean}) {
     stroke={2}  
     strokeLinejoin="miter"
   />}/>
-   <Button  className="bg-cyan-500 text-black  border-cyan-700" icon={<IconLock
+   <Button  className="dark:bg-cyan-500 bg-cyan-400 hover:bg-cyan-500 dark:hover:bg-cyan-400 text-zinc-800 dark:text-black  dark:border-cyan-700" icon={<IconLock
     size={14} 
     stroke={2}  
     strokeLinejoin="miter"
@@ -61,7 +68,7 @@ export default function Navbar({isCustom}:{isCustom:boolean}) {
     stroke={2}  
     strokeLinejoin="miter"
   />}/>
-  <p className='font-normal text-zinc-50 tracking-wide text-sm'>Hey, </p>
+  <p className='font-normal dark:text-zinc-50 text-zinc-700  tracking-wide text-sm'>Hey, </p>
   <span className="flex min-h-7 min-w-7 items-center justify-center rounded-full">
             <picture>
               <img
@@ -72,7 +79,7 @@ export default function Navbar({isCustom}:{isCustom:boolean}) {
               />{" "}
             </picture>
           </span>
-          <p className='font-normal text-zinc-50 tracking-wide text-sm'>John</p>
+          <p className='font-semibold dark:text-zinc-50 text-zinc-700 tracking-wide text-sm'>John</p>
           <Button           onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}
   icon={
             colorMode == "dark" ? (

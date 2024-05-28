@@ -5,15 +5,15 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@utils/clsx"
 
 const buttonVariants = cva(
-  "inline-flex items-center rounded-lg text-zinc-50 text-xs justify-center whitespace-nowrap rounded-md font-normal ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 gap-[5px] focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
-  {
+  "inline-flex items-center rounded-lg dark:text-zinc-50 text-zinc-700  text-xs justify-center whitespace-nowrap rounded-md font-normal transition-colors focus:outline-none gap-[5px]   disabled:pointer-events-none disabled:opacity-50",
+{
     variants: {
       variant: {
         default: "bg-primary  hover:bg-primary/90",
         destructive:
           "bg-destructive hover:bg-destructive/90",
         outline:
-          "border border-zinc-800 bg-zinc-900",
+          "border dark:border-zinc-800  border-zinc-200 hover:bg-zinc-100 bg-zinc-50 dark:bg-zinc-900",
         secondary:
           "bg-secondary hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
