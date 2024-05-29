@@ -108,7 +108,7 @@ preaching,| John baptized him in the Jordan
       </ResizablePanel>
       <ResizableHandle withHandle />
       <ResizablePanel defaultSize={25}>
-      <ScrollArea className="w-full h-full overflow-y-auto pb-2  relative">
+      <ScrollArea className="w-full h-full overflow-y-auto pb-2">
       <ScrollBar orientation="vertical" />
 
         <div className='flex items-center sticky dark:bg-zinc-950 bg-white  top-0 z-20 gap-[5px] border-b py-2.5 px-2 dark:border-zinc-900 border-zinc-200 justify-center'>
@@ -117,7 +117,7 @@ preaching,| John baptized him in the Jordan
    <Button label="Checks" 
   />
     </div>
-    <div className="space-y-2.5 px-5 py-2.5">
+    <div className="space-y-2.5   px-5 py-2.5">
 <QuestionCard isAudio/>
 <QuestionCard isImage/>
 <QuestionCard/>
