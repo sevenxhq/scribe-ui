@@ -44,7 +44,7 @@ const speeds = [
 export default function Editor() {
   return (
     <div className="w-screen flex h-[calc(100vh-3.75rem)]  flex-col  ">
-      <ResizablePanelGroup direction="horizontal" className="w-full h-[75%]">
+      <ResizablePanelGroup direction="horizontal" className="w-full h-[70%]">
         <ResizablePanel defaultSize={75}>
           <ResizablePanelGroup direction="vertical" className="w-full">
             <ResizablePanel defaultSize={58}>
@@ -154,12 +154,13 @@ confessed their sins, he baptized them in the Jordan River."
         </ResizablePanel>
       </ResizablePanelGroup>
 
-      <div className=" h-[25%]  border-t border-zinc-200 dark:border-zinc-900 ">
+      <div className=" h-[30%]  border-t border-zinc-200 dark:border-zinc-900 ">
      <ButtonGroups />
-     <IconAudio  />
+     <IconAudio className="fill-zinc-100 w-[100vw]  stroke-white dark:stroke-zinc-800 dark:fill-zinc-800 " />
 
-      <div className="flex w-full">
-<div className="w-[15%] flex flex-col gap-4 items-center ">
+
+      <div className="flex  w-full">
+<div className="2xl:w-[15%] w-[20%] flex flex-col gap-4 items-center ">
 <span className="uppercase leading-3 dark:text-zinc-500 text-zinc-400 text-[10px]   font-medium ">Audio</span>
 <CustomSelect
       options={sources}
@@ -168,7 +169,7 @@ confessed their sins, he baptized them in the Jordan River."
     />
 </div>
 <div className="w-[1px] h-7 mt-auto bg-gray-300 dark:bg-zinc-700" />
-<div className="w-[15%] flex flex-col gap-4 items-center ">
+<div className="2xl:w-[15%] w-[20%] flex flex-col gap-4 items-center ">
 <span className="uppercase leading-3 dark:text-zinc-500 text-zinc-400 text-[10px]   font-medium ">Speed</span>
 <CustomSelect
       options={speeds}
@@ -177,7 +178,7 @@ confessed their sins, he baptized them in the Jordan River."
     />
 </div>
 <div className="w-[1px] h-7 mt-auto bg-gray-300 dark:bg-zinc-700" />
-<div className="w-[40%] flex justify-between gap-7 px-16">
+<div className="2xl:w-[40%] w-[50%] flex justify-between gap-7 px-16">
 <div className="space-y-2">
 <p className="uppercase dark:text-zinc-500 text-zinc-400 text-[10px]   font-medium ">Rewind</p>
 <Button className="rounded-lg" icon={<IconRefresh
@@ -244,7 +245,7 @@ confessed their sins, he baptized them in the Jordan River."
 
 </div>
 <div className="w-[1px] h-7 mt-auto bg-gray-300 dark:bg-zinc-700" />
-<div className="w-[20%] flex flex-col gap-4 items-center ">
+<div className="2xl:w-[20%] w-[25%] flex flex-col gap-4 items-center ">
 <span className="uppercase leading-3 dark:text-zinc-500 text-zinc-400 text-[10px]   font-medium ">Takes</span>
 <div className="flex items-center gap-[10px]">
 <Button
@@ -264,15 +265,18 @@ confessed their sins, he baptized them in the Jordan River."
 </div>
 <div className="w-[1px] h-7 mt-auto bg-gray-300 dark:bg-zinc-700" />
 
-<div className="w-[10%] flex flex-col gap-4 items-center ">
+<div className="2xl:w-[10%] w-[15%] flex flex-col gap-4 items-center  ">
 <p className="uppercase dark:text-zinc-500 text-zinc-400 text-[10px]   font-medium ">Settings</p>
 <IconSettings
     size={24} 
     stroke={2}  
     strokeLinejoin="miter"
-    className="dark:text-zinc-50 text-zinc-700"
+    className="dark:text-zinc-50 text-zinc-500"
   />
 </div>
+      </div>
+      <div className="p-5 flex items-center justify-end">
+        <Badge className="h-4 max-h-4">saved 5 mins ago</Badge>
       </div>
       </div>
     </div>

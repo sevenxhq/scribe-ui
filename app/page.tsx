@@ -3,7 +3,7 @@ import Search from "./components/ui/Search";
 import ProjectSelector from "./components/ProjectSelector";
 import  IconBooks from "@public/icons/books.svg"
 import  IconCubePlus from "@public/icons/new-project.svg"
-import ProjectIntroLayout from "./components/ProjectIntro/page";
+import ProjectIntroLayout from "./components/ProjectIntro/Layout";
 import Link from "next/link";
 
 
