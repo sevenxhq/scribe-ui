@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectIntroLayout from "../components/ProjectIntro/page";
+import ProjectIntroLayout from "../components/ProjectIntro/Layout";
 import ProjectSelector from "../components/ProjectSelector";
 import IconTranslate from "@public/icons/translate.svg";
 import IconAudio from "@public/icons/audio-lines.svg";

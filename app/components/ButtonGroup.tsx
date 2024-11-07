@@ -3,8 +3,9 @@ import Button from './Button'; // Adjust the import path as necessary
 import { IconMicrophone, IconPhoto, IconMapPin, IconVideo } from '@tabler/icons-react';
 
 interface ButtonConfig {
-  icon: React.ReactNode;
-  className: string;
+  icon?: React.ReactNode;
+  className?: string;
+  label?: string;
 }
 
 interface ButtonGroupProps {
@@ -20,6 +21,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ buttons }) => {
           size="icon"
           className={button.className}
           icon={button.icon}
+          label={button.label}
         />
       ))}
     </div>
@@ -71,6 +73,11 @@ const buttonGroups = [
     {
       icon: <IconVideo size={12} stroke={2} strokeLinejoin="miter" />,
       className: "dark:bg-fuchsia-700 rounded-lg bg-fuchsia-400 hover:bg-fuchsia-500 dark:hover:bg-fuchsia-600",
+    },
+  ],
+  [
+    {
+      label:"Mark"
     },
   ],
   [
