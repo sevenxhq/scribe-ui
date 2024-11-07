@@ -156,7 +156,7 @@ confessed their sins, he baptized them in the Jordan River."
 
       <div className=" h-[30%]  border-t border-zinc-200 dark:border-zinc-900 ">
      <ButtonGroups />
-     <IconAudio className="fill-zinc-100 w-[100vw]  stroke-white dark:stroke-zinc-800 dark:fill-zinc-800 " />
+     <IconAudio className="fill-zinc-100  w-[100vw]  dark:stroke-zinc-800 dark:fill-zinc-800 " />
 
 
       <div className="flex  w-full">
